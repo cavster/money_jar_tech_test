@@ -1,0 +1,19 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Create a new bank account for a cutomer
+POST    /createAccount          controllers.BankAccountController.createAccount()
+
+# TransfereFunds between two customers
+POST    /transactions          controllers.BankAccountController.transferAmounts()
+
+# Check Balance for an account
+GET     /balance/:bankAccountId          controllers.BankAccountController.checkBalance(bankAccountId:entities.BankAccountId)
+
+# Get all transactions
+GET    /accounts/:bankAccountId/transactions    controllers.BankAccountController.getTransactions(bankAccountId:entities.BankAccountId)
+
+
+
